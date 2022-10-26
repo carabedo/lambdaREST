@@ -63,7 +63,7 @@ Si todo sale  bien deberiamos ver el mensaje:
 
 Creamos la lambda:
 
-```pyton
+```python
 import boto3
 
 def lambda_handler(event, context):
@@ -79,11 +79,11 @@ def lambda_handler(event, context):
     }
 ```
 Podemos probarla, vamos a  Test tab, creamos un nuevo test del template `hello-world` y usamos:
-
+```json
 {
   "id": "d290f1ee-6c54-4b01-90e6-d701748f0851"
 }
-
+```
 ## 3 Seteamos las conexiones de la API:
 
 ## 4 Deploy & Testing
