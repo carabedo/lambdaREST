@@ -50,6 +50,39 @@ Podemos probarla, vamos a  Test tab, creamos un nuevo test del template `hello-w
   "birthday": "2012-05-15"
 }
 ```
+Si todo sale  bien deberiamos ver el mensaje:
+
+```json
+{
+  "statusCode": 200,
+
+  "body": "Record d290f1ee-6c54-4b01-90e6-d701748f0851 added"
+}
+```
+### GET:
+
+Creamos la lambda:
+
+```pyton
+import boto3
+
+def lambda_handler(event, context):
+   client = boto3.resource('dynamodb')
+   table = client.Table('prode')
+   response = table.get_item(Key={'id': event['id']})
+   if 'Item' in response:
+       return response['Item']
+   else:
+       return {
+           'statusCode': '404',
+           'body': 'Not found'
+    }
+```
+Podemos probarla, vamos a  Test tab, creamos un nuevo test del template `hello-world` y usamos:
+
+{
+  "id": "d290f1ee-6c54-4b01-90e6-d701748f0851"
+}
 
 ## 3 Seteamos las conexiones de la API:
 
