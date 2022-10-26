@@ -10,10 +10,10 @@
   - Set the runtime to Python 3.7
   - Configure the function to use the IAM role you created.
   
-  ## 2 Codeamos las lambdas:
-  
-  ## 3 Seteamos las conexiones de la API:
-  
-  ## 4 Deploy & Testing
-  
+## 2 Codeamos las lambdas:
+
+## 3 Seteamos las conexiones de la API:
+
+## 4 Deploy & Testing
+
   
