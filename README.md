@@ -14,6 +14,8 @@
 
 ### POST:
 
+Creamos la lambda:
+
 ```python
 import boto3
 def lambda_handler(event, context):
@@ -29,6 +31,24 @@ def lambda_handler(event, context):
           'birthday': event['birthday']
        })
    return {'statusCode': response['ResponseMetadata']['HTTPStatusCode'], 'body': 'Record ' + event['id'] + ' added'}
+```
+
+Podemos probarla, vamos a  Test tab, creamos un nuevo test del template `hello-world` y usamos:
+
+```json
+{
+  "id": "d290f1ee-6c54-4b01-90e6-d701748f0851",
+
+  "name": "Hansie",
+
+  "breed": "Dachshund",
+
+  "gender": "Male",
+
+  "owner": "Mike",
+
+  "birthday": "2012-05-15"
+}
 ```
 
 ## 3 Seteamos las conexiones de la API:
