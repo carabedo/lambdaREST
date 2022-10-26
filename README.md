@@ -84,6 +84,9 @@ Podemos probarla, vamos a  Test tab, creamos un nuevo test del template `hello-w
   "id": "d290f1ee-6c54-4b01-90e6-d701748f0851"
 }
 ```
+
+Hasta aca ambas lambdas funcionan agregando y leyendo filas de la DB. Ahora necesitamos darle acceso desde cualquier ip.
+
 ## 3 Seteamos las conexiones de la API:
 
 ## 4 Deploy & Testing
