@@ -2,7 +2,7 @@
 
 ## 1 Insfraestructura:
 
-- A DynamoDB table named “Prode” with a primary key named `id`.
+- A DynamoDB table named “Prode” with a `Partition key` named `id`.
 - An IAM Role that grants a Lambda function with permission to:
   - Write and read from the “Prode” table.
   - Create log groups, a log stream and write log events.
